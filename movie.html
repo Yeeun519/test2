@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    .menu {
+      background-color: rgb(75, 241, 119);
+      height: 60px;
+      color: black;
+    }
+    ul {
+      display: flex;
+      padding: 15px;
+      gap: 20px;
+      list-style: none;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    h2 {
+      padding-top: 40px;
+      padding-bottom: 0;
+      text-align: center;
+      color: rgb(75, 241, 119);
+    }
+    .context {
+      background-color: black;
+    }
+
+    .card-container {
+      display: grid;
+      justify-content: center;
+      margin-top: 60px;
+      grid-template-columns: repeat(auto-fill, 195px);
+      gap: 20px;
+    }
+    .card {
+      background-color: black;
+      border-radius: 20px;
+      border: 1px solid black;
+      height: 280px; /* 원하는 고정 높이 값으로 조절 (예: 380px) */
+      overflow: hidden;
+      position: relative;
+    }
+    .card:hover {
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+    }
+    .card img {
+      border-radius: 20px;
+      max-width: 100%;
+      height: auto; /* 가로세로 비율 유지 */
+      transition: opacity 0.4s;
+    }
+    .card .info {
+      position: absolute;
+      margin-top: 60px;
+      opacity: 0;
+      width: 100%;
+      height: 100%;
+      transition: all ease 0.5s;
+      text-align: center;
+      justify-content: center;
+      top: 0;
+      left: 0;
+    }
+    .card .info h3 {
+      color: rgb(75, 241, 119);
+    }
+    .card .info p {
+      font-size: 13px;
+      color: white;
+    }
+    .card:hover img {
+      opacity: 0.3;
+    }
+
+    .card:hover .info {
+      opacity: 1;
+    }
+  </style>
+  <body>
+    <div class="menu">
+      <ul>
+        <li>&nbsp;&nbsp;</li>
+        <li><a href="index.html">홈</a></li>
+        <li><a href="movie.html">인기영화목록</a></li>
+      </ul>
+    </div>
+    <div class="context">
+      <h2>인기영화목록</h2>
+      <div class="card-container" id="container"></div>
+    </div>
+    <script src="movie.js"></script>
+  </body>
+</html>

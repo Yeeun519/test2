@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background-color: black;
+    }
+    .menu {
+      background-color: rgb(75, 241, 119);
+      height: 60px;
+      color: black;
+    }
+    .background {
+      color: rgb(75, 241, 119);
+      text-align: center;
+      padding-top: 150px;
+    }
+    ul {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+      padding: 15px;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    p {
+      padding: 40px;
+    }
+    #btn {
+      padding: 10px;
+      border: none;
+      border-radius: 50px;
+      background-color: rgb(75, 241, 119);
+      width: 150px;
+    }
+  </style>
+  <body>
+    <header class="menu">
+      <ul>
+        <li>&nbsp;&nbsp;</li>
+        <li><a href="index.html">홈</a></li>
+        <li><a href="movie.html">인기영화목록</a></li>
+      </ul>
+    </header>
+    <div class="background">
+      <h1>당신의 다음영화는?</h1>
+      <p>
+        전 세계인기영화부터 지금 놓치면 안되는 명작까지 <br />
+        감성적인 영화 탐험을 지금시작하세요.
+      </p>
+      <button id="btn">인기영화 보러가기</button>
+      <div class="card-container" id="cardContainer"></div>
+    </div>
+    <script src="movie.js"></script>
+  </body>
+</html>
